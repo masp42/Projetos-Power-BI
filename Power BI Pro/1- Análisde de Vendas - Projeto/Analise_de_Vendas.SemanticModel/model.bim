@@ -1,0 +1,1129 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"F-Vendas\",\"D-Canal de Vendas\",\"D-Cliente\",\"D-Produto\",\"D-Vendedor\",\"D-Região\",\"Medidas\",\"D-Data\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.128.1380.0 (24.04)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "pt-BR",
+    "cultures": [
+      {
+        "name": "pt-BR",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "AutoDetected_3ca8c99d-a82b-4517-9025-57721dfd0343",
+        "fromColumn": "Cod_Canal_vendas",
+        "fromTable": "F-Vendas",
+        "toColumn": "Cod_Canal_vendas",
+        "toTable": "D-Canal de Vendas"
+      },
+      {
+        "name": "AutoDetected_9c7cf9c0-ddc1-4a58-b9e8-131bf178fd5c",
+        "fromColumn": "Cod_Cliente",
+        "fromTable": "F-Vendas",
+        "toColumn": "Cod_Cliente",
+        "toTable": "D-Cliente"
+      },
+      {
+        "name": "AutoDetected_3fa38b08-f915-461e-a6c4-e46229415243",
+        "fromColumn": "Cod_produto",
+        "fromTable": "F-Vendas",
+        "toColumn": "Cod_produto",
+        "toTable": "D-Produto"
+      },
+      {
+        "name": "AutoDetected_ad0f04df-c3bc-435c-8c18-de1ad5eb3d7d",
+        "fromColumn": "Cod_vendedor",
+        "fromTable": "F-Vendas",
+        "toColumn": "Cod_vendedor",
+        "toTable": "D-Vendedor"
+      },
+      {
+        "name": "a86e600d-1b63-4f11-858f-402df1882b42",
+        "fromColumn": "Data_Venda",
+        "fromTable": "F-Vendas",
+        "toColumn": "Data_Venda",
+        "toTable": "D-Data"
+      }
+    ],
+    "sourceQueryCulture": "pt-BR",
+    "tables": [
+      {
+        "name": "F-Vendas",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Cod_Canal_vendas",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ad10a1f8-f29a-4792-8fef-bedf7748bbb1",
+            "sourceColumn": "Cod_Canal_vendas",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cod_Cliente",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c4898517-ba68-4359-9832-fe55d05bbed6",
+            "sourceColumn": "Cod_Cliente",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cod_produto",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0bcede79-d32c-4f9d-89e2-a503088cb537",
+            "sourceColumn": "Cod_produto",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cod_vendedor",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b034a31c-08bf-43c5-8c30-a407636bddf5",
+            "sourceColumn": "Cod_vendedor",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Data_Venda",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "4607e4ac-3962-4b75-a6d5-d3cdcfb02a74",
+            "sourceColumn": "Data_Venda",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Preço_custo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
+            "lineageTag": "8ad43903-a0f4-43a8-ac76-4808a851bb7b",
+            "sourceColumn": "Preço_custo",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Preço_Unitário",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
+            "lineageTag": "9b8dec8c-82ad-4a75-a32f-1950efde5401",
+            "sourceColumn": "Preço_Unitário",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Quantidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "189d45fa-7151-4b1f-b7a0-c706917e8a2f",
+            "sourceColumn": "Quantidade",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Situacao",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "adc0228f-3e8f-444e-8f52-7eb8dc17b97a",
+            "sourceColumn": "Situacao",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Total Venda",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "expression": "'F-Vendas'[Preço_Unitário] * 'F-Vendas'[Quantidade]",
+            "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
+            "isDataTypeInferred": true,
+            "lineageTag": "aa570b64-6dc5-423b-8b85-69161a1f6ce5",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "Total Preço Custo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "expression": "'F-Vendas'[Quantidade] * 'F-Vendas'[Preço_custo]",
+            "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
+            "isDataTypeInferred": true,
+            "lineageTag": "c640f3be-ca1b-4621-8264-7bb0806bf78e",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          },
+          {
+            "name": "Lucro",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "dataType": "decimal",
+            "expression": "'F-Vendas'[Total Venda] - 'F-Vendas'[Total Preço Custo]",
+            "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
+            "isDataTypeInferred": true,
+            "lineageTag": "0d871d86-0f08-4ee4-86d3-79ac625ef5a1",
+            "summarizeBy": "sum",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "8e51323a-0716-4932-bdee-944e04054252",
+        "partitions": [
+          {
+            "name": "F-Vendas",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(\"D:\\Marcelo Data\\OneDrive\\Power BI Expert\\DashBoards\\1- Analise de Vendas\\Relatório-Vendas3.csv\"),[Delimiter=\",\", Columns=17, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Cod_Canal_vendas\", Int64.Type}, {\"Cod_Cliente\", Int64.Type}, {\"Cod_produto\", Int64.Type}, {\"Cod_vendedor\", Int64.Type}, {\"Data_Venda\", type datetime}, {\"Preço_custo\", type number}, {\"Preço_Unitário\", type number}, {\"Quantidade\", Int64.Type}, {\"Situacao\", type text}, {\"Canal_de_vendas\", type text}, {\"Nome_Categoria\", type text}, {\"Nome_Cliente\", type text}, {\"Nome_produto\", type text}, {\"Nome_estado\", type text}, {\"Cod_uf\", Int64.Type}, {\"Abreviação\", type text}, {\"Nome_Vendedor\", type text}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Tipo Alterado\",{{\"Cod_Canal_vendas\", type text}, {\"Cod_Cliente\", type text}, {\"Cod_produto\", type text}, {\"Cod_vendedor\", type text}, {\"Data_Venda\", type date}, {\"Preço_custo\", Currency.Type}, {\"Preço_Unitário\", Currency.Type}}),",
+                "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Tipo Alterado1\",\"N\",\"Normal\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Valor Substituído1\" = Table.ReplaceValue(#\"Valor Substituído\",\"C\",\"Cancelado\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Valor Substituído1\",{{\"Cod_uf\", type text}}),",
+                "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado2\",{\"Canal_de_vendas\", \"Nome_Cliente\", \"Nome_produto\", \"Nome_Categoria\", \"Nome_Vendedor\", \"Nome_estado\", \"Abreviação\", \"Cod_uf\"})",
+                "in",
+                "    #\"Colunas Removidas\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_cf54a6df-9cef-4f99-8747-10714ca401a8",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "6d186f2c-cc4b-43bc-af22-56060327be95",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "9b3b099c-f375-4ba8-9f2d-62a383c493f5",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "1ea10871-0e9c-46e6-b1eb-e3af51426608",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "2a9efdf2-8b71-44ba-86be-7bbbd2374b09",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "3657208a-4cb7-4057-a9ab-2931b736cd27",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Trim \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "1b1416fd-3409-430c-9e4c-2859359578ee",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Dia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "7ffd2879-7d1c-40b2-b9f2-332c9424c740",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hierarquia de datas",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Ano",
+                "column": "Ano",
+                "lineageTag": "02cc0ffe-ce48-4d4f-98c8-68e0093d6ee5",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "8ba92645-364f-4076-af8b-43b780ba639f",
+                "ordinal": 1
+              },
+              {
+                "name": "Mês",
+                "column": "Mês",
+                "lineageTag": "4d40e3f9-bf8a-42ed-8076-4b375fd13ca1",
+                "ordinal": 2
+              },
+              {
+                "name": "Dia",
+                "column": "Dia",
+                "lineageTag": "6a3b7d26-ef9c-4bc1-ba90-af616a4bac28",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "4bee4f39-99d3-496c-93e1-fcd7beb42553"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "eb23835c-5522-4b2c-a7ed-65aeb4b46d28",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_cf54a6df-9cef-4f99-8747-10714ca401a8",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "D-Canal de Vendas",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Cod_Canal_vendas",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "291fe594-39a5-405e-a2bf-524582e1ae1f",
+            "sourceColumn": "Cod_Canal_vendas",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Canal_de_vendas",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1438c512-5229-452d-a42e-6acf4b41b413",
+            "sourceColumn": "Canal_de_vendas",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "f535ff63-7282-450a-a2c1-d391d28f16fb",
+        "partitions": [
+          {
+            "name": "D-Canal de Vendas",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(\"D:\\Marcelo Data\\OneDrive\\Power BI Expert\\DashBoards\\1- Analise de Vendas\\Relatório-Vendas3.csv\"),[Delimiter=\",\", Columns=17, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Cod_Canal_vendas\", Int64.Type}, {\"Cod_Cliente\", Int64.Type}, {\"Cod_produto\", Int64.Type}, {\"Cod_vendedor\", Int64.Type}, {\"Data_Venda\", type datetime}, {\"Preço_custo\", type number}, {\"Preço_Unitário\", type number}, {\"Quantidade\", Int64.Type}, {\"Situacao\", type text}, {\"Canal_de_vendas\", type text}, {\"Nome_Categoria\", type text}, {\"Nome_Cliente\", type text}, {\"Nome_produto\", type text}, {\"Nome_estado\", type text}, {\"Cod_uf\", Int64.Type}, {\"Abreviação\", type text}, {\"Nome_Vendedor\", type text}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Tipo Alterado\",{{\"Cod_Canal_vendas\", type text}, {\"Cod_Cliente\", type text}, {\"Cod_produto\", type text}, {\"Cod_vendedor\", type text}, {\"Data_Venda\", type date}, {\"Preço_custo\", Currency.Type}, {\"Preço_Unitário\", Currency.Type}}),",
+                "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Tipo Alterado1\",\"N\",\"Normal\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Valor Substituído1\" = Table.ReplaceValue(#\"Valor Substituído\",\"C\",\"Cancelado\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Valor Substituído1\",{{\"Cod_uf\", type text}}),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Tipo Alterado2\",{\"Cod_Canal_vendas\", \"Canal_de_vendas\"}),",
+                "    #\"Duplicatas Removidas\" = Table.Distinct(#\"Outras Colunas Removidas\", {\"Canal_de_vendas\"})",
+                "in",
+                "    #\"Duplicatas Removidas\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "D-Cliente",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Cod_Cliente",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "485ba6d8-fb6a-4bdf-bdbf-7a034b180c7b",
+            "sourceColumn": "Cod_Cliente",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nome_Cliente",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4e9fdb50-9996-42d3-be22-25b69fefb316",
+            "sourceColumn": "Nome_Cliente",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "10e3f3cc-32e5-4e5a-84ed-b9d5f4cd1e8f",
+        "partitions": [
+          {
+            "name": "D-Cliente",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(\"D:\\Marcelo Data\\OneDrive\\Power BI Expert\\DashBoards\\1- Analise de Vendas\\Relatório-Vendas3.csv\"),[Delimiter=\",\", Columns=17, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Cod_Canal_vendas\", Int64.Type}, {\"Cod_Cliente\", Int64.Type}, {\"Cod_produto\", Int64.Type}, {\"Cod_vendedor\", Int64.Type}, {\"Data_Venda\", type datetime}, {\"Preço_custo\", type number}, {\"Preço_Unitário\", type number}, {\"Quantidade\", Int64.Type}, {\"Situacao\", type text}, {\"Canal_de_vendas\", type text}, {\"Nome_Categoria\", type text}, {\"Nome_Cliente\", type text}, {\"Nome_produto\", type text}, {\"Nome_estado\", type text}, {\"Cod_uf\", Int64.Type}, {\"Abreviação\", type text}, {\"Nome_Vendedor\", type text}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Tipo Alterado\",{{\"Cod_Canal_vendas\", type text}, {\"Cod_Cliente\", type text}, {\"Cod_produto\", type text}, {\"Cod_vendedor\", type text}, {\"Data_Venda\", type date}, {\"Preço_custo\", Currency.Type}, {\"Preço_Unitário\", Currency.Type}}),",
+                "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Tipo Alterado1\",\"N\",\"Normal\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Valor Substituído1\" = Table.ReplaceValue(#\"Valor Substituído\",\"C\",\"Cancelado\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Valor Substituído1\",{{\"Cod_uf\", type text}}),",
+                "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado2\",{\"Canal_de_vendas\"}),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Colunas Removidas\",{\"Cod_Cliente\", \"Nome_Cliente\"}),",
+                "    #\"Duplicatas Removidas\" = Table.Distinct(#\"Outras Colunas Removidas\", {\"Cod_Cliente\"}),",
+                "    #\"Linhas Classificadas\" = Table.Sort(#\"Duplicatas Removidas\",{{\"Cod_Cliente\", Order.Ascending}})",
+                "in",
+                "    #\"Linhas Classificadas\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "D-Produto",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Cod_produto",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1fd5a2ad-15c1-4970-a371-d55e44e8bd32",
+            "sourceColumn": "Cod_produto",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nome_produto",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d27818bb-640a-4962-9be0-33ff2e8d8bd6",
+            "sourceColumn": "Nome_produto",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nome_Categoria",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "03d61234-9274-4d06-9173-01f8ef8ff1e2",
+            "sourceColumn": "Nome_Categoria",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "0bdd6d64-8b5d-4bfd-9a17-a798f9d6997e",
+        "partitions": [
+          {
+            "name": "D-Produto",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(\"D:\\Marcelo Data\\OneDrive\\Power BI Expert\\DashBoards\\1- Analise de Vendas\\Relatório-Vendas3.csv\"),[Delimiter=\",\", Columns=17, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Cod_Canal_vendas\", Int64.Type}, {\"Cod_Cliente\", Int64.Type}, {\"Cod_produto\", Int64.Type}, {\"Cod_vendedor\", Int64.Type}, {\"Data_Venda\", type datetime}, {\"Preço_custo\", type number}, {\"Preço_Unitário\", type number}, {\"Quantidade\", Int64.Type}, {\"Situacao\", type text}, {\"Canal_de_vendas\", type text}, {\"Nome_Categoria\", type text}, {\"Nome_Cliente\", type text}, {\"Nome_produto\", type text}, {\"Nome_estado\", type text}, {\"Cod_uf\", Int64.Type}, {\"Abreviação\", type text}, {\"Nome_Vendedor\", type text}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Tipo Alterado\",{{\"Cod_Canal_vendas\", type text}, {\"Cod_Cliente\", type text}, {\"Cod_produto\", type text}, {\"Cod_vendedor\", type text}, {\"Data_Venda\", type date}, {\"Preço_custo\", Currency.Type}, {\"Preço_Unitário\", Currency.Type}}),",
+                "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Tipo Alterado1\",\"N\",\"Normal\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Valor Substituído1\" = Table.ReplaceValue(#\"Valor Substituído\",\"C\",\"Cancelado\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Valor Substituído1\",{{\"Cod_uf\", type text}}),",
+                "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado2\",{\"Canal_de_vendas\", \"Nome_Cliente\"}),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Colunas Removidas\",{\"Nome_Categoria\", \"Nome_produto\", \"Cod_produto\"}),",
+                "    #\"Colunas Reordenadas\" = Table.ReorderColumns(#\"Outras Colunas Removidas\",{\"Cod_produto\", \"Nome_Categoria\", \"Nome_produto\"}),",
+                "    #\"Duplicatas Removidas\" = Table.Distinct(#\"Colunas Reordenadas\", {\"Cod_produto\"}),",
+                "    #\"Linhas Classificadas\" = Table.Sort(#\"Duplicatas Removidas\",{{\"Cod_produto\", Order.Ascending}}),",
+                "    #\"Colunas Reordenadas1\" = Table.ReorderColumns(#\"Linhas Classificadas\",{\"Cod_produto\", \"Nome_produto\", \"Nome_Categoria\"})",
+                "in",
+                "    #\"Colunas Reordenadas1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "D-Vendedor",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Nome_Vendedor",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f7eac6d6-4f8d-48b9-a7e3-1a1497cc3bdb",
+            "sourceColumn": "Nome_Vendedor",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cod_vendedor",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bfb7de3a-6d9d-4720-8bc6-e91863574f2b",
+            "sourceColumn": "Cod_vendedor",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "4e7b4eb9-32fc-4578-a091-464bfa51dad8",
+        "partitions": [
+          {
+            "name": "D-Vendedor",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(\"D:\\Marcelo Data\\OneDrive\\Power BI Expert\\DashBoards\\1- Analise de Vendas\\Relatório-Vendas3.csv\"),[Delimiter=\",\", Columns=17, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Cod_Canal_vendas\", Int64.Type}, {\"Cod_Cliente\", Int64.Type}, {\"Cod_produto\", Int64.Type}, {\"Cod_vendedor\", Int64.Type}, {\"Data_Venda\", type datetime}, {\"Preço_custo\", type number}, {\"Preço_Unitário\", type number}, {\"Quantidade\", Int64.Type}, {\"Situacao\", type text}, {\"Canal_de_vendas\", type text}, {\"Nome_Categoria\", type text}, {\"Nome_Cliente\", type text}, {\"Nome_produto\", type text}, {\"Nome_estado\", type text}, {\"Cod_uf\", Int64.Type}, {\"Abreviação\", type text}, {\"Nome_Vendedor\", type text}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Tipo Alterado\",{{\"Cod_Canal_vendas\", type text}, {\"Cod_Cliente\", type text}, {\"Cod_produto\", type text}, {\"Cod_vendedor\", type text}, {\"Data_Venda\", type date}, {\"Preço_custo\", Currency.Type}, {\"Preço_Unitário\", Currency.Type}}),",
+                "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Tipo Alterado1\",\"N\",\"Normal\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Valor Substituído1\" = Table.ReplaceValue(#\"Valor Substituído\",\"C\",\"Cancelado\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Valor Substituído1\",{{\"Cod_uf\", type text}}),",
+                "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado2\",{\"Canal_de_vendas\", \"Nome_Cliente\", \"Nome_produto\", \"Nome_Categoria\"}),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Colunas Removidas\",{\"Nome_Vendedor\", \"Cod_vendedor\"}),",
+                "    #\"Duplicatas Removidas\" = Table.Distinct(#\"Outras Colunas Removidas\", {\"Nome_Vendedor\"}),",
+                "    #\"Linhas Classificadas\" = Table.Sort(#\"Duplicatas Removidas\",{{\"Nome_Vendedor\", Order.Ascending}, {\"Cod_vendedor\", Order.Descending}}),",
+                "    #\"Linhas em Branco Removidas\" = Table.SelectRows(#\"Linhas Classificadas\", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {\"\", null})))",
+                "in",
+                "    #\"Linhas em Branco Removidas\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "D-Região",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Cod_uf",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "416e6f3e-8d28-4a48-88f5-6cc331ecc8cc",
+            "sourceColumn": "Cod_uf",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nome_estado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "14402d05-914c-432d-b8c1-ab2b18db062d",
+            "sourceColumn": "Nome_estado",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Abreviação",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "64af6116-9885-49f7-9f19-cd84eede9b75",
+            "sourceColumn": "Abreviação",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "1d259d02-f0ce-4537-885c-4e02c08f7231",
+        "partitions": [
+          {
+            "name": "D-Região",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(\"D:\\Marcelo Data\\OneDrive\\Power BI Expert\\DashBoards\\1- Analise de Vendas\\Relatório-Vendas3.csv\"),[Delimiter=\",\", Columns=17, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Cod_Canal_vendas\", Int64.Type}, {\"Cod_Cliente\", Int64.Type}, {\"Cod_produto\", Int64.Type}, {\"Cod_vendedor\", Int64.Type}, {\"Data_Venda\", type datetime}, {\"Preço_custo\", type number}, {\"Preço_Unitário\", type number}, {\"Quantidade\", Int64.Type}, {\"Situacao\", type text}, {\"Canal_de_vendas\", type text}, {\"Nome_Categoria\", type text}, {\"Nome_Cliente\", type text}, {\"Nome_produto\", type text}, {\"Nome_estado\", type text}, {\"Cod_uf\", Int64.Type}, {\"Abreviação\", type text}, {\"Nome_Vendedor\", type text}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Tipo Alterado\",{{\"Cod_Canal_vendas\", type text}, {\"Cod_Cliente\", type text}, {\"Cod_produto\", type text}, {\"Cod_vendedor\", type text}, {\"Data_Venda\", type date}, {\"Preço_custo\", Currency.Type}, {\"Preço_Unitário\", Currency.Type}}),",
+                "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Tipo Alterado1\",\"N\",\"Normal\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Valor Substituído1\" = Table.ReplaceValue(#\"Valor Substituído\",\"C\",\"Cancelado\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Valor Substituído1\",{{\"Cod_uf\", type text}}),",
+                "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado2\",{\"Canal_de_vendas\", \"Nome_Cliente\", \"Nome_produto\", \"Nome_Categoria\", \"Nome_Vendedor\"}),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Colunas Removidas\",{\"Nome_estado\", \"Cod_uf\", \"Abreviação\"}),",
+                "    #\"Duplicatas Removidas\" = Table.Distinct(#\"Outras Colunas Removidas\", {\"Nome_estado\"}),",
+                "    #\"Colunas Reordenadas\" = Table.ReorderColumns(#\"Duplicatas Removidas\",{\"Cod_uf\", \"Nome_estado\", \"Abreviação\"}),",
+                "    #\"Linhas Classificadas\" = Table.Sort(#\"Colunas Reordenadas\",{{\"Nome_estado\", Order.Ascending}})",
+                "in",
+                "    #\"Linhas Classificadas\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Medidas",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Coluna 1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b8994938-f1b3-4843-b2c0-3994948bc600",
+            "sourceColumn": "Coluna 1",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ad37ab83-de97-433a-8d07-5726f0bfedea",
+        "measures": [
+          {
+            "name": "M Total Vendas",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "SUM('F-Vendas'[Total Venda])",
+            "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
+            "lineageTag": "f32bae5b-ab76-439a-9f71-943018af8586"
+          },
+          {
+            "name": "M Total Custo",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "SUM('F-Vendas'[Total Preço Custo])",
+            "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
+            "lineageTag": "363960d9-4ce3-4b63-a1c6-bda44ec442f4"
+          },
+          {
+            "name": "M Lucro",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "Medidas[M Total Vendas] - Medidas[M Total Custo]",
+            "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
+            "lineageTag": "e211564e-89b6-4ae8-bdab-e4cffafd8ffc"
+          },
+          {
+            "name": "M Maior Venda",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "MAX('F-Vendas'[Total Venda])",
+            "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
+            "lineageTag": "adff0ff9-57f1-46b2-a4c2-6942c1d7f5db"
+          },
+          {
+            "name": "M Quantidade Vendas",
+            "expression": "COUNT('F-Vendas'[Cod_Cliente])",
+            "formatString": "0",
+            "lineageTag": "8c6f43b5-3b19-4bc8-a5ab-729557cfa00d"
+          },
+          {
+            "name": "M Media Venda",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"pt-BR\"}"
+              }
+            ],
+            "expression": "AVERAGE('F-Vendas'[Total Venda])",
+            "formatString": "\"R$\"\\ #,0.00;-\"R$\"\\ #,0.00;\"R$\"\\ #,0.00",
+            "lineageTag": "a8e1a99d-18f7-484c-9d23-df1338695dca"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Medidas",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Coluna 1\" = _t]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(Fonte,{{\"Coluna 1\", type text}})",
+                "in",
+                "    #\"Tipo Alterado\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "D-Data",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Data_Venda",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "isKey": true,
+            "lineageTag": "891db88d-00a4-4a10-8265-3a3b43520b86",
+            "sourceColumn": "Data_Venda",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a88d9213-5a77-4d36-bcf8-d48f21c24d97",
+            "sourceColumn": "Ano",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5bdd7c76-74dc-4935-9c36-35d1ac207faf",
+            "sourceColumn": "Mês",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Nome do Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ff2e2417-b286-4cd7-b27a-66300f080271",
+            "sourceColumn": "Nome do Mês",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "de3cb230-2dea-4c71-9e2b-441d8d0a5c82",
+            "sourceColumn": "Trimestre",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ano/Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "FORMAT('D-Data'[Data_Venda],\"yyyy/mmm\")",
+            "isDataTypeInferred": true,
+            "lineageTag": "c42fc47a-d1a6-4748-9e08-a8bc1afa3c32",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "dataCategory": "Time",
+        "lineageTag": "3885ca87-ce38-47ae-a693-76cb3578902b",
+        "partitions": [
+          {
+            "name": "D-Data",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(\"D:\\Marcelo Data\\OneDrive\\Power BI Expert\\DashBoards\\1- Analise de Vendas\\Relatório-Vendas3.csv\"),[Delimiter=\",\", Columns=17, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Cod_Canal_vendas\", Int64.Type}, {\"Cod_Cliente\", Int64.Type}, {\"Cod_produto\", Int64.Type}, {\"Cod_vendedor\", Int64.Type}, {\"Data_Venda\", type datetime}, {\"Preço_custo\", type number}, {\"Preço_Unitário\", type number}, {\"Quantidade\", Int64.Type}, {\"Situacao\", type text}, {\"Canal_de_vendas\", type text}, {\"Nome_Categoria\", type text}, {\"Nome_Cliente\", type text}, {\"Nome_produto\", type text}, {\"Nome_estado\", type text}, {\"Cod_uf\", Int64.Type}, {\"Abreviação\", type text}, {\"Nome_Vendedor\", type text}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Tipo Alterado\",{{\"Cod_Canal_vendas\", type text}, {\"Cod_Cliente\", type text}, {\"Cod_produto\", type text}, {\"Cod_vendedor\", type text}, {\"Data_Venda\", type date}, {\"Preço_custo\", Currency.Type}, {\"Preço_Unitário\", Currency.Type}}),",
+                "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Tipo Alterado1\",\"N\",\"Normal\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Valor Substituído1\" = Table.ReplaceValue(#\"Valor Substituído\",\"C\",\"Cancelado\",Replacer.ReplaceText,{\"Situacao\"}),",
+                "    #\"Tipo Alterado2\" = Table.TransformColumnTypes(#\"Valor Substituído1\",{{\"Cod_uf\", type text}}),",
+                "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado2\",{\"Canal_de_vendas\", \"Nome_Cliente\", \"Nome_produto\", \"Nome_Categoria\", \"Nome_Vendedor\", \"Nome_estado\", \"Abreviação\", \"Cod_uf\"}),",
+                "    #\"Outras Colunas Removidas\" = Table.SelectColumns(#\"Colunas Removidas\",{\"Data_Venda\"}),",
+                "    #\"Linhas Classificadas\" = Table.Sort(#\"Outras Colunas Removidas\",{{\"Data_Venda\", Order.Ascending}}),",
+                "    #\"Duplicatas Removidas\" = Table.Distinct(#\"Linhas Classificadas\"),",
+                "    #\"Ano Inserido\" = Table.AddColumn(#\"Duplicatas Removidas\", \"Ano\", each Date.Year([Data_Venda]), Int64.Type),",
+                "    #\"Mês Inserido\" = Table.AddColumn(#\"Ano Inserido\", \"Mês\", each Date.Month([Data_Venda]), Int64.Type),",
+                "    #\"Nome do Mês Inserido\" = Table.AddColumn(#\"Mês Inserido\", \"Nome do Mês\", each Date.MonthName([Data_Venda]), type text),",
+                "    #\"Trimestre Inserido\" = Table.AddColumn(#\"Nome do Mês Inserido\", \"Trimestre\", each Date.QuarterOfYear([Data_Venda]), Int64.Type),",
+                "    #\"Prefixo Adicionado\" = Table.TransformColumns(#\"Trimestre Inserido\", {{\"Trimestre\", each \"Tri \" & Text.From(_, \"pt-BR\"), type text}})",
+                "in",
+                "    #\"Prefixo Adicionado\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
