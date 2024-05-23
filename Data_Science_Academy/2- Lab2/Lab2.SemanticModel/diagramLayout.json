@@ -7,7 +7,60 @@
         "x": 0,
         "y": 0
       },
-      "nodes": [],
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Clientes",
+          "nodeLineageTag": "f9c33bcc-01a0-47e1-93e0-c0d12c542dba",
+          "size": {
+            "height": 290,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 36
+          },
+          "nodeIndex": "Pedidos",
+          "nodeLineageTag": "b13c490a-13f2-4e7e-b168-2dcf2f2cdccf",
+          "size": {
+            "height": 214,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 48
+          },
+          "nodeIndex": "Produtos",
+          "nodeLineageTag": "26938c45-8255-4494-95a4-06fb77343c57",
+          "size": {
+            "height": 199,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 307,
+            "y": 426
+          },
+          "nodeIndex": "Vendas",
+          "nodeLineageTag": "49e74555-49cf-4a94-a4b9-60be2954a015",
+          "size": {
+            "height": 246,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
       "name": "Todas as tabelas",
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,
