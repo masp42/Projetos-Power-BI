@@ -67,6 +67,13 @@
         "fromTable": "Vendas",
         "toColumn": "ID Produto",
         "toTable": "Produtos"
+      },
+      {
+        "name": "8b0c198c-46af-0f45-daa4-613c2a229082",
+        "fromColumn": "Pedido",
+        "fromTable": "Vendas",
+        "toColumn": "ID Pedido",
+        "toTable": "Pedidos"
       }
     ],
     "sourceQueryCulture": "pt-BR",
@@ -425,6 +432,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
           }
         ],
         "columns": [
@@ -536,9 +547,10 @@
                 "let",
                 "    Fonte = Csv.Document(File.Contents(\"D:\\Marcelo Data\\Data_Science_Academy\\PowerBI Para Business Intelligence e Data Science\\3- Modelagem Relacionamentos e DAX\\Pedidos.csv\"),[Delimiter=\";\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
-                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"ID Pedido\", type text}, {\"Data Pedido\", type date}, {\"Data Envio\", type date}, {\"Modo Envio\", type text}, {\"Prioridade Pedido\", type text}})",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"ID Pedido\", type text}, {\"Data Pedido\", type date}, {\"Data Envio\", type date}, {\"Modo Envio\", type text}, {\"Prioridade Pedido\", type text}}),",
+                "    #\"Duplicatas Removidas\" = Table.Distinct(#\"Tipo Alterado\")",
                 "in",
-                "    #\"Tipo Alterado\""
+                "    #\"Duplicatas Removidas\""
               ],
               "type": "m"
             }
@@ -1139,6 +1151,25 @@
             "lineageTag": "990d9e8b-218e-4c6b-8e36-fcf75a6b6323",
             "sourceColumn": "Custo Envio",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "Lucro",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "expression": "Vendas[Valor Venda] - Vendas[Custo Envio]",
+            "isDataTypeInferred": true,
+            "lineageTag": "dae931e2-f7b4-4336-ae34-95ce6cebfdd6",
+            "summarizeBy": "sum",
+            "type": "calculated"
           }
         ],
         "lineageTag": "49e74555-49cf-4a94-a4b9-60be2954a015",
