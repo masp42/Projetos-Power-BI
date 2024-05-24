@@ -1170,6 +1170,25 @@
             "lineageTag": "dae931e2-f7b4-4336-ae34-95ce6cebfdd6",
             "summarizeBy": "sum",
             "type": "calculated"
+          },
+          {
+            "name": "MargemLucro",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "expression": "ROUND(DIVIDE(Vendas[Lucro],Vendas[Valor Venda]) * 100, 2)",
+            "isDataTypeInferred": true,
+            "lineageTag": "237274ce-3f73-4d66-82e1-ecd8f6ef07af",
+            "summarizeBy": "sum",
+            "type": "calculated"
           }
         ],
         "lineageTag": "49e74555-49cf-4a94-a4b9-60be2954a015",
